@@ -1,4 +1,7 @@
-package com.example.spring_data;
+package com.example.spring_data.dao.order;
+
+import com.example.spring_data.dao.customer.Customer;
+import com.example.spring_data.dao.product.Product;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

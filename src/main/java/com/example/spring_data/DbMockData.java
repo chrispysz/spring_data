@@ -1,5 +1,11 @@
 package com.example.spring_data;
 
+import com.example.spring_data.dao.customer.Customer;
+import com.example.spring_data.dao.customer.CustomerRepository;
+import com.example.spring_data.dao.order.Order;
+import com.example.spring_data.dao.order.OrderRepository;
+import com.example.spring_data.dao.product.Product;
+import com.example.spring_data.dao.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;

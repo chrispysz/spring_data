@@ -1,0 +1,208 @@
+GET localhost:8081/api/product/2
+{
+    "id": 2,
+    "name": "Rura",
+    "price": 5.0,
+    "available": true
+}
+
+GET localhost:8081/api/product/all
+[
+    {
+        "id": 1,
+        "name": "Korek",
+        "price": 2.55,
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Rura",
+        "price": 5.0,
+        "available": true
+    }
+]
+
+POST localhost:8081/api/admin/product
+{
+    "id": 3,
+    "name": "Klucz",
+    "price": 2.55,
+    "available": true
+}
+
+PATCH localhost:8081/api/admin/product/3
+{
+    "id": 3,
+    "name": "Kluczczczcz",
+    "price": 2.55,
+    "available": true
+}
+
+GET localhost:8081/api/customer/1
+{
+    "id": 1,
+    "name": "Jak Kowalski",
+    "address": "Wrocław"
+}
+
+GET localhost:8081/api/customer/all
+[
+    {
+        "id": 1,
+        "name": "Jak Kowalski",
+        "address": "Wrocław"
+    }
+]
+
+POST localhost:8081/api/admin/customer
+{
+    "id": 2,
+    "name": "Tomasz Kowalski",
+    "address": "Warszawa"
+}
+
+PUT localhost:8081/api/admin/customer/2
+{
+    "id": 2,
+    "name": "Tomasz Kowalskiiiiii",
+    "address": "Warszawa"
+}
+
+PATCH localhost:8081/api/admin/customer/2
+{
+    "id": 2,
+    "name": "Tomasz Kowalskiiiiii",
+    "address": "Warszawaaaaaa"
+}
+
+GET localhost:8081/api/order/1
+{
+    "id": 1,
+    "customer": {
+        "id": 1,
+        "name": "Jak Kowalski",
+        "address": "Wrocław"
+    },
+    "products": [
+        {
+            "id": 2,
+            "name": "Rura",
+            "price": 5.0,
+            "available": true
+        },
+        {
+            "id": 1,
+            "name": "Korek",
+            "price": 2.55,
+            "available": true
+        }
+    ],
+    "placeDate": "2021-04-22T21:03:10.35105",
+    "status": "in progress"
+}
+
+GET localhost:8081/api/order/all
+[
+    {
+        "id": 1,
+        "customer": {
+            "id": 1,
+            "name": "Jak Kowalski",
+            "address": "Wrocław"
+        },
+        "products": [
+            {
+                "id": 1,
+                "name": "Korek",
+                "price": 2.55,
+                "available": true
+            },
+            {
+                "id": 2,
+                "name": "Rura",
+                "price": 5.0,
+                "available": true
+            }
+        ],
+        "placeDate": "2021-04-22T21:03:10.35105",
+        "status": "in progress"
+    }
+]
+
+POST localhost:8081/api/admin/order
+{
+    "id": 3,
+    "customer": {
+        "id": 1,
+        "name": "Jak Kowalski",
+        "address": "Wrocławwwwwwwww"
+    },
+    "products": [
+        {
+            "id": 1,
+            "name": "Korek",
+            "price": 2.55,
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "Rura",
+            "price": 5.0,
+            "available": true
+        }
+    ],
+    "placeDate": "2019-04-22T21:03:10.35105",
+    "status": "in progress"
+}
+
+PUT localhost:8081/api/admin/order/3
+{
+    "id": 3,
+    "customer": {
+        "id": 1,
+        "name": "Jak Kowalski",
+        "address": "Wrocław"
+    },
+    "products": [
+        {
+            "id": 2,
+            "name": "Rura",
+            "price": 5.0,
+            "available": true
+        },
+        {
+            "id": 1,
+            "name": "Korek",
+            "price": 2.55,
+            "available": true
+        }
+    ],
+    "placeDate": "2019-04-22T21:03:10.35105",
+    "status": "in progress"
+}
+
+PATCH localhost:8081/api/admin/order/3
+{
+    "id": 3,
+    "customer": {
+        "id": 1,
+        "name": "Jak Kowalskiiiiiiiii",
+        "address": "Wrocławwwwwwwww"
+    },
+    "products": [
+        {
+            "id": 1,
+            "name": "Korek",
+            "price": 2.55,
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "Rura",
+            "price": 5.0,
+            "available": true
+        }
+    ],
+    "placeDate": "2019-04-22T21:03:10.35105",
+    "status": "in progress"
+}

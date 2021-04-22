@@ -1,8 +1,8 @@
-package com.example.spring_data;
+package com.example.spring_data.dao.product;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrderRepository extends CrudRepository<Order, Long> {
+public interface ProductRepository extends CrudRepository<Product, Long> {
 }

@@ -1,4 +1,4 @@
-package com.example.spring_data;
+package com.example.spring_data.dao.customer;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
