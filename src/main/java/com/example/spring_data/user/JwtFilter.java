@@ -33,11 +33,11 @@ public class JwtFilter extends BasicAuthenticationFilter {
     }
 
     private UsernamePasswordAuthenticationToken getAuthenticationByToken(String header) {
-        Jws<Claims> claimsJws = Jwts.parser().setSigningKey("pass".getBytes())
+        Jws<Claims> claimsJws = Jwts.parser().setSigningKey("HU7cB55PzI")
                 .parseClaimsJws(header.replace("Bearer ", ""));
 
         String role = claimsJws.getBody().get("role").toString();
-        String username = claimsJws.getBody().get("name").toString();
+        String username = claimsJws.getSignature();
         Set<SimpleGrantedAuthority> simpleGrantedAuthorities =
                 Collections.singleton(new SimpleGrantedAuthority(role));
 
